@@ -11,7 +11,7 @@ describe('pruebas en template-string.js', () => {
             expect(saludo).toBe('Hola ' + nombre);
     })
 
-    test('debe retornar "Hola CArlos!" si no hay parametro nombre', () => {
+    test('debe retornar "Hola Carlos!" si no hay parametro nombre', () => {
             
             const saludo = getSaludo();
 
