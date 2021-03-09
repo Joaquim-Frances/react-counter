@@ -6,15 +6,6 @@ import { shallow } from 'Enzyme'
 
 describe('Pruebas en PrimeraApp', () => {
     
-    // test('Debe mostrar el titulo "Hola soy Krilin"', () => {
-        
-    //     const saludo = "Hola, soy Krilin!";
-
-    //     const { getByText } = render( <PrimeraApp saludo={ saludo }/>);
-
-    //     expect(getByText(saludo)).toBeInTheDocument();
-
-    // })
 
     test('debe mostrar <PrimeraApp /> correctamente', () => {
         const saludo='Hola caracola';
@@ -22,6 +13,20 @@ describe('Pruebas en PrimeraApp', () => {
 
         expect(wrapper).toMatchSnapshot();
     })
-    
+
+    test('debe mostrar el subtítulo enviado por props', () => {
+        
+        const saludo='Hola caracola';
+        const subtitulo = 'Hey soy el subtítulo más molón';
+        const wrapper = shallow( 
+            <PrimeraApp 
+                saludo={ saludo }
+                subtitulo ={ subtitulo }
+            />
+        );
+
+        const textParrafo = wrapper.find('p').text();
+        expect(textParrafo).toBe(subtitulo);
+    })
     
 })
