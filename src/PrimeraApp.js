@@ -1,14 +1,14 @@
-import { Fragment } from "react";
+import { Fragment as div } from "react";
 import PropTypes from 'prop-types';
 
 
 const PrimeraApp = ( { saludo, subtitulo }) => {
 
     return (
-        <Fragment>
+        <div>
             <h1> { saludo } </h1>
             <p> { subtitulo } </p>
-        </Fragment>
+        </div>
     )
 
 }
